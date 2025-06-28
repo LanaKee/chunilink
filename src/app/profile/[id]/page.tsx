@@ -60,8 +60,8 @@ export default async function ProfilePage(props: { params: Promise<{ id: string 
 	}
 
 	return (
-		<div className="dark:bg-background/70 min-w-screen relative min-h-screen bg-white/30 py-10 backdrop-blur-2xl">
-			<div className="mx-6">
+		<div className="dark:bg-background/70 min-w-screen relative min-h-screen bg-white/30 py-10">
+			<div className="mx-6 mt-4">
 				<div className="mx-auto max-w-4xl">
 					<UserCard
 						slug={player.slug}
