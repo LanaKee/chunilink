@@ -202,14 +202,13 @@ const StatusBadge: React.FC<StatusBadgeProps> = ({ type, label, className }) => 
 
 	return (
 		<div
-			className={`${styleClass} ${className} group/badge relative flex items-center gap-1 overflow-hidden rounded-xl border border-white/20 px-3 py-1.5 text-xs font-bold shadow-lg backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-white/40 hover:shadow-xl`}
+			className={`${styleClass} ${className} group relative flex items-center gap-1 overflow-hidden rounded px-2 py-1 text-xs font-bold shadow-sm transition-all duration-300 hover:shadow-md`}
 		>
-			{/* 글래스 하이라이트 효과 */}
-			<div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover/badge:opacity-100"></div>
-			<span className="relative z-10 flex items-center gap-1.5 transition-transform duration-300 group-hover/badge:scale-105">
+			<span className="relative z-10 flex items-center gap-1">
 				{icon}
 				{label.replace('ALL_JUSTICE_CRITICAL', 'AJC').replace('_PLUS', ' +').replaceAll('_', ' ')}
 			</span>
+			<div className="absolute inset-0 bg-white/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 		</div>
 	)
 }
@@ -236,85 +235,74 @@ const SongCard = ({ song, index }: { song: PlayerScoreWithSong; index: number })
 	}
 
 	return (
-		<div className="dark:via-white/2 group relative flex transform flex-col overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-white/10 via-white/5 to-transparent p-[1px] backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:scale-105 hover:border-white/40 hover:shadow-2xl hover:shadow-indigo-500/20 dark:border-white/10 dark:from-white/5 dark:hover:border-white/20 dark:hover:shadow-purple-500/20">
-			{/* 글래스 리플렉션 효과 */}
-			<div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
-
-			{/* 내부 글래스 컨테이너 */}
-			<div className="from-white/8 via-white/3 to-white/1 relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br backdrop-blur-md dark:from-black/20 dark:via-black/10 dark:to-black/5">
-				{/* 커버 이미지 */}
-				<div className="relative w-full pt-[100%]">
-					<Image
-						src={`https://chunithm-net-eng.com/mobile/img/${song.song.imageUrl}`}
-						alt={song.song.title}
-						fill
-						className="object-cover transition-transform duration-500 group-hover:scale-110"
-					/>
-					{/* 이미지 오버레이 글래스 효과 */}
-					<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-40"></div>
-
-					<div className="absolute left-2 top-2 flex h-7 w-7 items-center justify-center rounded-full bg-black/40 text-sm font-bold text-white backdrop-blur-sm transition-all duration-300 group-hover:bg-black/60">
-						{index + 1}
-					</div>
-					<div
-						className={`absolute bottom-2 right-2 ${difficultyColor.color} flex min-w-[32px] flex-row items-center space-x-1 rounded-lg px-2 py-1 text-xs font-bold text-white backdrop-blur-sm transition-all duration-300 group-hover:scale-105`}
-					>
-						<span>{diffInfo?.difficulty}</span>
-						<span>{String(diffInfo?.level)}</span>
-					</div>
-
-					<div
-						className={`absolute right-2 top-2 rounded-lg ${getPlayRankColor(song.playRank)} px-2 py-1 text-xs font-bold shadow-lg backdrop-blur-sm transition-all duration-300 group-hover:scale-105`}
-					>
-						{displayPlayRank}
-					</div>
+		<div className="flex transform flex-col overflow-hidden rounded-lg border border-white/40 bg-white/5 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-white/10 dark:bg-black/5 dark:shadow-white/5">
+			{/* 커버 이미지 */}
+			<div className="relative w-full pt-[100%]">
+				<Image
+					src={`https://chunithm-net-eng.com/mobile/img/${song.song.imageUrl}`}
+					alt={song.song.title}
+					fill
+					className="object-cover"
+				/>
+				<div className="absolute left-2 top-2 flex h-6 w-6 items-center justify-center rounded-full bg-black/60 text-sm font-bold text-white">
+					{index + 1}
+				</div>
+				<div
+					className={`absolute bottom-2 right-2 ${difficultyColor.color} flex min-w-[32px] flex-row items-center space-x-1 rounded px-1.5 py-1 text-xs font-bold text-white`}
+				>
+					<span>{diffInfo?.difficulty}</span>
+					<span>{String(diffInfo?.level)}</span>
 				</div>
 
-				{/* 곡 정보 */}
-				<div className="p-3">
-					<h3
-						className="truncate text-sm font-bold text-gray-800 transition-colors duration-300 group-hover:text-gray-900 dark:text-white dark:group-hover:text-gray-100"
-						title={song.song.title}
-					>
-						{song.song.title}
-					</h3>
-					<p
-						className="truncate text-xs text-gray-600 transition-colors duration-300 group-hover:text-gray-700 dark:text-gray-400 dark:group-hover:text-gray-300"
-						title={song.song.artist || ''}
-					>
-						{song.song.artist}
-					</p>
+				<div
+					className={`inner absolute right-2 top-2 rounded ${getPlayRankColor(song.playRank)} inner px-1.5 py-0.5 text-xs font-bold shadow-md`}
+				>
+					{displayPlayRank}
 				</div>
+			</div>
 
-				{/* 점수 및 레이팅 - 고정된 위치 */}
-				<div className="flex items-end justify-between p-3 pt-0">
-					<div className="flex flex-col items-start">
-						<div className="font-mono text-xs text-gray-700 transition-colors duration-300 group-hover:text-gray-800 dark:text-gray-300 dark:group-hover:text-gray-200">
-							{song.score.toLocaleString()}
-						</div>
+			{/* 곡 정보 */}
+			<div className="p-2">
+				<h3
+					className="truncate text-sm font-bold text-gray-800 dark:text-white"
+					title={song.song.title}
+				>
+					{song.song.title}
+				</h3>
+				<p
+					className="truncate text-xs text-gray-600 dark:text-gray-400"
+					title={song.song.artist || ''}
+				>
+					{song.song.artist}
+				</p>
+			</div>
+
+			{/* 점수 및 레이팅 - 고정된 위치 */}
+			<div className="flex items-end justify-between p-2 pt-0">
+				<div className="flex flex-col items-start">
+					<div className="font-mono text-xs text-gray-700 dark:text-gray-300">
+						{song.score.toLocaleString()}
 					</div>
-					<div
-						className={`font-mono text-sm font-bold transition-transform duration-300 group-hover:scale-110 ${getRatingTextColor(song.rating ? (typeof song.rating === 'object' && 'toNumber' in song.rating ? song.rating.toNumber() : Number(song.rating)) : 0)}`}
-					>
-						{parseFloat(String(song.rating)).toFixed(2)}
-					</div>
 				</div>
-
-				{/* 구분선 - 글래스 효과 */}
-				<hr className="mx-3 my-1 border-t border-white/20 transition-colors duration-300 group-hover:border-white/30 dark:border-white/10 dark:group-hover:border-white/20" />
-
-				{/* 향상된 상태 배지 섹션 - 높이 고정 */}
-				<div className="mb-2 h-24 flex-1 p-3 pt-1">
-					{song.clearType && song.clearType !== 'CLEAR' && (
-						<StatusBadge type="clear" label={song.clearType} className="mt-2 flex-grow" />
-					)}
-					{song.comboType && (
-						<StatusBadge type="combo" label={song.comboType} className="mt-2 flex-grow" />
-					)}
-					{song.cToCType && (
-						<StatusBadge type="chain" label={song.cToCType} className="mt-2 flex-grow" />
-					)}
+				<div
+					className={`font-mono text-sm font-bold ${getRatingTextColor(song.rating ? (typeof song.rating === 'object' && 'toNumber' in song.rating ? song.rating.toNumber() : Number(song.rating)) : 0)}`}
+				>
+					{parseFloat(String(song.rating)).toFixed(2)}
 				</div>
+			</div>
+			<hr className="mx-2 my-1 border-t border-gray-200 dark:border-gray-700" />
+
+			{/* 향상된 상태 배지 섹션 - 높이 고정 */}
+			<div className="mb-1 h-24 flex-1 p-2 pt-1">
+				{song.clearType && song.clearType !== 'CLEAR' && (
+					<StatusBadge type="clear" label={song.clearType} className="mt-2 flex-grow" />
+				)}
+				{song.comboType && (
+					<StatusBadge type="combo" label={song.comboType} className="mt-2 flex-grow" />
+				)}
+				{song.cToCType && (
+					<StatusBadge type="chain" label={song.cToCType} className="mt-2 flex-grow" />
+				)}
 			</div>
 		</div>
 	)
@@ -332,27 +320,20 @@ const AverageRatingDisplay = ({
 }) => {
 	const bgColor =
 		type === 'new'
-			? 'bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-indigo-500/20 dark:from-indigo-500/10 dark:via-purple-500/10 dark:to-indigo-500/10'
-			: 'bg-gradient-to-r from-amber-500/20 via-orange-500/20 to-amber-500/20 dark:from-amber-500/10 dark:via-orange-500/10 dark:to-amber-500/10'
+			? 'bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-indigo-900/50 dark:to-purple-900/50'
+			: 'bg-gradient-to-r from-amber-100 to-orange-100 dark:from-amber-900/50 dark:to-orange-900/50'
 
 	const borderColor =
 		type === 'new'
-			? 'border-indigo-300/40 dark:border-indigo-400/20'
-			: 'border-amber-300/40 dark:border-amber-400/20'
+			? 'border-indigo-200 dark:border-indigo-800'
+			: 'border-amber-200 dark:border-amber-800'
 
 	return (
 		<div
-			className={`group/rating inline-flex items-center gap-2 rounded-full border ${borderColor} ${bgColor} px-4 py-2 shadow-lg backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-opacity-60 hover:shadow-xl`}
+			className={`inline-flex items-center gap-2 rounded-full border ${borderColor} ${bgColor} px-3 py-1.5 shadow-sm`}
 		>
-			{/* 글래스 하이라이트 */}
-			<div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover/rating:opacity-100"></div>
-
-			<span className="relative z-10 text-sm font-medium text-gray-700 transition-colors duration-300 group-hover/rating:text-gray-800 dark:text-gray-300 dark:group-hover/rating:text-gray-200">
-				{label}
-			</span>
-			<span
-				className={`relative z-10 text-base font-bold transition-transform duration-300 group-hover/rating:scale-110 ${getRatingTextColor(rating)}`}
-			>
+			<span className="text-sm font-medium text-gray-700 dark:text-gray-300">{label}</span>
+			<span className={`text-base font-bold ${getRatingTextColor(rating)}`}>
 				{rating.toFixed(2)}
 			</span>
 		</div>
