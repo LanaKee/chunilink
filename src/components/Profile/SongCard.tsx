@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { difficultyMap } from '@/constants/diffiulty'
 import { getPlayRankColor, getRatingTextColor } from '@/constants/rating'
 import { Difficulty } from '@/types/chunithm'
