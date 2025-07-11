@@ -1,11 +1,14 @@
 import { difficultyMap } from '@/constants/diffiulty'
 import { getPlayRankColor, getRatingTextColor } from '@/constants/rating'
+import { Difficulty } from '@/types/chunithm'
 import { PlayerScoreWithSong } from '@/types/prisma/PlayerScoreWithSong'
 import Image from 'next/image'
 import { StatusBadge } from './StatusBadge'
 
 export const SongCard = ({ song, index }: { song: PlayerScoreWithSong; index: number }) => {
-	const diffInfo = song.song.difficulties.find((diff) => diff.difficulty === song.difficulty)
+	const diffInfo = song.song.difficulties.find(
+		(diff: { difficulty: any }) => diff.difficulty === song.difficulty
+	)
 	const difficultyColor = difficultyMap[diffInfo?.difficulty as Difficulty]
 
 	const displayPlayRank = song.playRank?.replace('_PLUS', '+') || ''

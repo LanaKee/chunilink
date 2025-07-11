@@ -1,3 +1,5 @@
+import { Prisma } from '@prisma/client'
+
 export type PlayerScoreWithSong = Prisma.PlayerScoreGetPayload<{
 	include: {
 		song: {

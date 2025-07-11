@@ -11,7 +11,7 @@ import {
 	X,
 	Zap
 } from 'lucide-react'
-import React from 'react'
+import React, { JSX } from 'react'
 
 type StatusBadgeType = 'clear' | 'combo' | 'chain'
 type StatusBadgeProps = {
