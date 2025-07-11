@@ -10,6 +10,7 @@ export default function ProfilePage() {
 					<UserCard
 						slug="chunilink"
 						userName="CHUNILINK"
+						level={1}
 						rank={51}
 						avatarUrl="https://chunithm-net-eng.com/mobile/img/9cf73ca9d18732f5.png"
 						rating={17.32}

@@ -43,3 +43,5 @@ export type ChunithmData = {
 	new?: ChunithmScore[]
 	score: ChunithmScore[]
 }
+
+export type Difficulty = 'BASIC' | 'ADVANCED' | 'EXPERT' | 'MASTER' | 'ULTIMA' | 'WORLD_END'
