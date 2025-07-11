@@ -24,39 +24,39 @@ const getClearTypeStyle = (clearType: string) => {
 	switch (clearType) {
 		case 'HARD':
 		case 'BRAVE':
-			return 'bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 text-yellow-900'
+			return 'bg-gradient-to-r from-yellow-300/50 via-yellow-400/50 to-orange-400/50 border border-yellow-400/60 text-yellow-900 dark:text-yellow-100 backdrop-blur-sm'
 		case 'ABSOLUTE':
-			return 'bg-vivid-rainbow text-gray-700'
+			return 'bg-gradient-to-r from-purple-400/50 via-pink-400/50 to-yellow-400/50 border border-purple-400/60 text-gray-800 dark:text-white backdrop-blur-sm'
 		case 'CATASTROPHY':
-			return 'bg-rainbow text-gray-700'
+			return 'bg-gradient-to-r from-red-400/50 via-purple-400/50 to-blue-400/50 border border-purple-400/60 text-gray-800 dark:text-white backdrop-blur-sm'
 		case 'FAIL':
-			return 'bg-gradient-to-r from-red-700 to-red-500 dark:from-red-800 dark:to-red-600 text-white'
+			return 'bg-gradient-to-r from-red-500/50 to-red-600/50 border border-red-500/60 text-red-900 dark:text-red-100 backdrop-blur-sm'
 		default:
-			return 'bg-gradient-to-r from-green-500 to-emerald-400 dark:from-green-600 dark:to-emerald-500' // 기본
+			return 'bg-gradient-to-r from-green-500/50 to-emerald-400/50 border border-green-400/60 text-green-900 dark:text-green-100 backdrop-blur-sm' // 기본
 	}
 }
 
 const getComboTypeStyle = (comboType: string) => {
 	switch (comboType) {
 		case 'ALL_JUSTICE':
-			return 'bg-vivid-rainbow text-gray-700'
+			return 'bg-gradient-to-r from-purple-400/50 via-pink-400/50 to-yellow-400/50 border border-purple-400/60 text-gray-800 dark:text-white backdrop-blur-sm'
 		case 'ALL_JUSTICE_CRITICAL':
-			return 'bg-rainbow text-gray-700'
+			return 'bg-gradient-to-r from-red-400/50 via-purple-400/50 to-blue-400/50 border border-purple-400/60 text-gray-800 dark:text-white backdrop-blur-sm'
 		case 'FULL_COMBO':
-			return 'bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 text-yellow-900'
+			return 'bg-gradient-to-r from-yellow-300/50 via-yellow-400/50 to-orange-400/50 border border-yellow-400/60 text-yellow-900 dark:text-yellow-100 backdrop-blur-sm'
 		default:
-			return 'bg-gradient-to-r from-blue-500 to-indigo-400 dark:from-blue-600 dark:to-indigo-500'
+			return 'bg-gradient-to-r from-blue-500/50 to-indigo-400/50 border border-blue-400/60 text-blue-900 dark:text-blue-100 backdrop-blur-sm'
 	}
 }
 
 const getChainTypeStyle = (chainType: string) => {
 	switch (chainType) {
 		case 'FULL_CHAIN':
-			return 'bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 text-yellow-900'
+			return 'bg-gradient-to-r from-yellow-300/50 via-yellow-400/50 to-orange-400/50 border border-yellow-400/60 text-yellow-900 dark:text-yellow-100 backdrop-blur-sm'
 		case 'FULL_CHAIN_PLUS':
-			return 'bg-vivid-rainbow text-gray-700'
+			return 'bg-gradient-to-r from-purple-400/50 via-pink-400/50 to-yellow-400/50 border border-purple-400/60 text-gray-800 dark:text-white backdrop-blur-sm'
 		default:
-			return 'bg-gradient-to-r from-purple-500 to-pink-400 dark:from-purple-600 dark:to-pink-500'
+			return 'bg-gradient-to-r from-purple-500/50 to-pink-400/50 border border-purple-400/60 text-purple-900 dark:text-purple-100 backdrop-blur-sm'
 	}
 }
 
@@ -124,13 +124,13 @@ export const StatusBadge: React.FC<StatusBadgeProps> = ({ type, label, className
 
 	return (
 		<div
-			className={`${styleClass} ${className} group relative flex items-center gap-1 overflow-hidden rounded px-2 py-1 text-xs font-bold shadow-sm transition-all duration-300 hover:shadow-md`}
+			className={`${styleClass} ${className} group relative flex items-center gap-1 overflow-hidden rounded-lg px-2 py-1 text-xs font-bold shadow-lg transition-all duration-300 hover:border-opacity-60 hover:shadow-xl`}
 		>
-			<span className="relative z-10 flex items-center gap-1">
+			<span className="relative z-10 flex items-center gap-1 drop-shadow-sm">
 				{icon}
 				{label.replace('ALL_JUSTICE_CRITICAL', 'AJC').replace('_PLUS', ' +').replaceAll('_', ' ')}
 			</span>
-			<div className="absolute inset-0 bg-white/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+			<div className="absolute inset-0 rounded-lg bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 		</div>
 	)
 }
