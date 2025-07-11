@@ -111,7 +111,8 @@ const UserCard: React.FC<UserCardProps> = ({
 							month: '2-digit',
 							day: '2-digit',
 							hour: '2-digit',
-							minute: '2-digit'
+							minute: '2-digit',
+							timeZone: 'Asia/Seoul'
 						})}
 					</span>
 					<span className="font-mono font-medium text-gray-400 dark:text-gray-100">
