@@ -66,7 +66,8 @@ export default async function ProfilePage(props: { params: Promise<{ id: string 
 					<UserCard
 						slug={player.slug}
 						userName={player.name}
-						rank={player.level}
+						rank={favoriteCharacter?.rank || 1}
+						level={player.level}
 						avatarUrl={avatarUrl}
 						rating={Number(player.rating)}
 						friendCode={player.friendCode}

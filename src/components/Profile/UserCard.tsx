@@ -9,6 +9,7 @@ interface UserCardProps {
 	slug: string
 	userName: string
 	rank: number
+	level: number
 	avatarUrl: string
 	rating: number
 	friendCode: string
