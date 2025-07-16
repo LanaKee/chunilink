@@ -12,7 +12,7 @@ export const getRatingTextColor = (value: number) => {
 		return 'bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-amber-300' // 골드
 	if (value < 16)
 		return 'bg-clip-text text-transparent bg-gradient-to-r from-amber-200 to-yellow-100' // 백금
-	if (value < 17)
+	if (value < 18)
 		return 'bg-clip-text text-transparent bg-linear-to-r/longer from-pink-400 to-purple-400'
 	return 'bg-clip-text text-transparent bg-gradient-to-r from-zinc-700 to-zinc-500'
 }
