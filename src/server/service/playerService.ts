@@ -1,4 +1,3 @@
-
 import { getServerAuthSession } from '@/library/auth'
 import { prisma } from '@/library/prismaSingleton'
 import { getPlayerBySlug } from '@/server/database/player'
