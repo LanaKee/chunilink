@@ -68,33 +68,33 @@ enum PlayerRegion {
 }
 
 model Player {
-  id           String    @id @default(cuid()) @map("id")
-  userId       String    @map("user_id")
-  name         String    @map("name")
-  slug         String    @unique @map("slug")
-  friendCode   String    @map("friend_code")
-  region       PlayerRegion @map("region") @default(ASIA)
-  level        Int
-  playCount    Int       @map("play_count") @default(0)
-  rating       Decimal   @map("rating") @db.Decimal(7, 4) @default(0)
-  newRating    Decimal   @map("new_rating") @db.Decimal(7, 4) @default(0)
-  oldRating    Decimal   @map("old_rating") @db.Decimal(7, 4) @default(0)
-  lastPlayed   DateTime? @map("last_played") @default(now())
-  lastUpdated  DateTime? @map("last_updated") @default(now())
+  id          String       @id @default(cuid()) @map("id")
+  userId      String       @map("user_id")
+  name        String       @map("name")
+  slug        String       @unique @map("slug")
+  friendCode  String       @map("friend_code")
+  region      PlayerRegion @default(ASIA) @map("region")
+  level       Int
+  playCount   Int          @default(0) @map("play_count")
+  rating      Decimal      @default(0) @map("rating") @db.Decimal(7, 4)
+  newRating   Decimal      @default(0) @map("new_rating") @db.Decimal(7, 4)
+  oldRating   Decimal      @default(0) @map("old_rating") @db.Decimal(7, 4)
+  lastPlayed  DateTime?    @default(now()) @map("last_played")
+  lastUpdated DateTime?    @default(now()) @map("last_updated")
 
-  User             User[]
-  PlayerScore      PlayerScore[]
-  PlayerCharacter  PlayerCharacter[]
+  User            User[]
+  PlayerScore     PlayerScore[]
+  PlayerCharacter PlayerCharacter[]
 
   PlayerHonor PlayerHonor[]
 }
 
 model PlayerCharacter {
-  id          String   @id @default(cuid())
-  playerId    String   @map("player_id")
-  characterId String   @map("character_id")
-  rank        Int      @map("rank")
-  isFavorite  Boolean  @default(false) @map("is_favorite")
+  id          String  @id @default(cuid())
+  playerId    String  @map("player_id")
+  characterId String  @map("character_id")
+  rank        Int     @map("rank")
+  isFavorite  Boolean @default(false) @map("is_favorite")
 
   player    Player    @relation(fields: [playerId], references: [id], onDelete: Cascade)
   character Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
@@ -104,19 +104,19 @@ model PlayerCharacter {
 }
 
 model Character {
-  id          String   @id
-  name        String   @map("name")
-  imageUrl    String   @map("image_url")
+  id       String @id
+  name     String @map("name")
+  imageUrl String @map("image_url")
 
   PlayerCharacter PlayerCharacter[]
 }
 
 model PlayerHonor {
-  id          String   @id @default(cuid()) @map("id")
-  playerId    String   @map("player_id")
-  honorId     String   @map("honor_id")
-  isDisplayed Boolean  @default(false) @map("is_displayed")
-  displayOrder Int?    @map("display_order") @default(0)
+  id           String  @id @default(cuid()) @map("id")
+  playerId     String  @map("player_id")
+  honorId      String  @map("honor_id")
+  isDisplayed  Boolean @default(false) @map("is_displayed")
+  displayOrder Int?    @default(0) @map("display_order")
 
   player Player @relation(fields: [playerId], references: [id], onDelete: Cascade)
   honor  Honor  @relation(fields: [honorId], references: [id], onDelete: Cascade)
@@ -125,9 +125,9 @@ model PlayerHonor {
 }
 
 model Honor {
-  id          String   @id @default(cuid()) @map("id")
-  class       HonorClass @map("class")
-  name        String   @map("name")
+  id          String        @id @default(cuid()) @map("id")
+  class       HonorClass    @map("class")
+  name        String        @map("name")
   PlayerHonor PlayerHonor[]
 
   @@unique([class, name])
@@ -148,17 +148,17 @@ enum RatingType {
 }
 
 model PlayerScore {
-  id           String   @id @default(cuid()) @map("id")
-  rating       Decimal? @map("rating") @db.Decimal(7, 4)
-  ratingType   RatingType @map("rating_type") @default(NONE)
-  playerId     String   @map("player_id")
-  songId       String   @map("song_id")
-  difficulty   DifficultyCode
-  playRank     PlayRank   @map("play_rank") @default(D)
-  score        Int
-  clearType    ClearType  @map("clear_type")
-  comboType    ComboType? @map("combo_type")
-  cToCType     CToCType?  @map("ctoc_type")
+  id         String         @id @default(cuid()) @map("id")
+  rating     Decimal?       @map("rating") @db.Decimal(7, 4)
+  ratingType RatingType     @default(NONE) @map("rating_type")
+  playerId   String         @map("player_id")
+  songId     String         @map("song_id")
+  difficulty DifficultyCode
+  playRank   PlayRank       @default(D) @map("play_rank")
+  score      Int
+  clearType  ClearType      @map("clear_type")
+  comboType  ComboType?     @map("combo_type")
+  cToCType   CToCType?      @map("ctoc_type")
 
   player Player @relation(fields: [playerId], references: [id], onDelete: Cascade)
   song   Song   @relation(fields: [songId], references: [id], onDelete: Cascade)
@@ -167,19 +167,19 @@ model PlayerScore {
 }
 
 model Song {
-  id            String           @id
-  title         String
-  titleKana     String?          @map("title_kana")
-  titlekorean   String?          @map("title_korean")
-  artist        String?          @map("artist_name")
-  imageUrl      String           @map("image_url")
-  bpm           Int
-  version       Version
-  genre         Genre
-  releaseJP     DateTime?        @map("release_jp_date")
-  releaseIntl   DateTime?        @map("release_intl_date")
-  wikiUrl       String           @map("wiki_url")
-  difficulties  SongDifficulty[]
+  id           String           @id
+  title        String
+  titleKana    String?          @map("title_kana")
+  titlekorean  String?          @map("title_korean")
+  artist       String?          @map("artist_name")
+  imageUrl     String           @map("image_url")
+  bpm          Int
+  version      Version
+  genre        Genre
+  releaseJP    DateTime?        @map("release_jp_date")
+  releaseIntl  DateTime?        @map("release_intl_date")
+  wikiUrl      String           @map("wiki_url")
+  difficulties SongDifficulty[]
 
   updatedAt DateTime @default(now()) @map("updated_at")
   createdAt DateTime @default(now()) @map("created_at")
@@ -188,13 +188,13 @@ model Song {
 }
 
 model SongDifficulty {
-  id           String   @id @default(uuid())
-  songId       String   @map("song_id")
+  id           String         @id @default(uuid())
+  songId       String         @map("song_id")
   difficulty   DifficultyCode
-  designer     String?  @map("designer_name")
-  displayLevel String   @map("level_disply")
-  level        Decimal  @map("level_value") @db.Decimal(4, 2)
-  chartPath    String?  @map("chart_path")
+  designer     String?        @map("designer_name")
+  displayLevel String         @map("level_disply")
+  level        Decimal        @map("level_value") @db.Decimal(4, 2)
+  chartPath    String?        @map("chart_path")
 
   totalNotes Int @map("notes_total")
   notesTap   Int @map("notes_tap")
@@ -239,6 +239,7 @@ enum Version {
   LUMINOUS
   LUMINOUS_PLUS
   VERSE
+  X_VERSE
 }
 
 enum Genre {
@@ -247,7 +248,7 @@ enum Genre {
   TOUHOU     @map("TOUHOU_PROJECT")
   ORIGINAL
   VARIETY
-  IRODORI   @map("IRODORIMIDORI")
+  IRODORI    @map("IRODORIMIDORI")
   GEKIMAI
 }
 
