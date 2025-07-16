@@ -31,7 +31,7 @@ function mapClearTypeToPrisma(clearType: string): any {
 		ABSOLUTE: 'ABSOLUTE',
 		CATASTROPHY: 'CATASTROPHY'
 	}
-	return clearTypeMap[clearType] || 'FAIL'
+	return clearTypeMap[clearType] || 'CLEAR'
 }
 
 // 콤보 타입을 프리즈마 열거형으로 변환
