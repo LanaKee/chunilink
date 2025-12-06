@@ -1,7 +1,7 @@
 export default function VerseBackground({ children }: { children: React.ReactNode }) {
 	return (
 		<div className="relative min-h-screen">
-			<div className="common-bg fixed inset-0 select-none overflow-visible">
+			<div id="verse" className="common-bg fixed inset-0 select-none overflow-visible">
 				<div
 					className="absolute inset-0 -z-20 bg-cover bg-center"
 					style={{ backgroundImage: "url('/images/chunithm/chunithm-base.jpg')" }}
