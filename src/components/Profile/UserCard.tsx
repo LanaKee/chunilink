@@ -36,8 +36,8 @@ const UserCard: React.FC<UserCardProps> = ({
 	// 국밥은 8천원으로 합시다
 	const minWon = playCount * 1000
 	const maxWon = playCount * 1500
-	const minGukbap = Math.floor(minWon / 8000)
-	const maxGukbap = Math.floor(maxWon / 8000)
+	const minGukbap = Math.floor(minWon / 7300)
+	const maxGukbap = Math.floor(maxWon / 7300)
 
 	// 현재 버전과 주차 계산
 	const getCurrentVersion = (date: Date) => {
@@ -95,9 +95,9 @@ const UserCard: React.FC<UserCardProps> = ({
 								<div className="mb-2 text-gray-200">
 									약 {minWon.toLocaleString()}원 ~ {maxWon.toLocaleString()}원
 								</div>
-								<div className="mb-1 font-semibold text-amber-300">🍲 환산 국밥</div>
+								<div className="mb-1 font-semibold text-amber-300">🍔 환산 싸이부기(세트)</div>
 								<div className="leading-relaxed text-gray-200">
-									약 {minGukbap}GUBP ~{maxGukbap}GUBP
+									약 {minGukbap}THBG ~{maxGukbap}THBG
 								</div>
 								<div className="absolute -top-1.5 left-4 h-3 w-3 rotate-45 transform border-l border-t border-white/10 bg-black/90"></div>
 							</div>
