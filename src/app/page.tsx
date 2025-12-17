@@ -25,6 +25,11 @@ export default function Home() {
 					</div>
 
 					<div className="dark:bg-background/80 w-full rounded-2xl border-t border-gray-200 bg-white/40 px-8 py-10 backdrop-blur-lg transition-all duration-300 dark:border-white/15">
+						<h1 className="mb-6 text-3xl font-bold text-gray-800 dark:text-white">
+							<span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
+								X-VERSE 대응 업데이트 완료
+							</span>
+						</h1>
 						<div className="space-y-6 leading-relaxed text-gray-700 dark:text-gray-300">
 							<div className="flex items-start space-x-3">
 								<div className="mt-3 h-2 w-2 flex-shrink-0 rounded-full bg-blue-500"></div>
