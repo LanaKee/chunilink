@@ -240,6 +240,7 @@ enum Version {
   LUMINOUS_PLUS
   VERSE
   X_VERSE
+  X_VERSE_X
 }
 
 enum Genre {

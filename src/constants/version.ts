@@ -31,8 +31,12 @@ export const CHUNITHM_INTERNATIONAL_VERSIONS = [
 		version: 'CHUNITHM LUMINOUS PLUS',
 		release: '2024-10-17'
 	},
-  {
-    version: 'CHUNITHM VERSE',
-    release: '2025-04-17'
-  },
+	{
+		version: 'CHUNITHM VERSE',
+		release: '2025-04-17'
+	},
+	{
+		version: 'CHUNITHM CROSS VERSE',
+		release: '2025-11-20'
+	}
 ]
