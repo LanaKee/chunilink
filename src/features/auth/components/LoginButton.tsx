@@ -1,6 +1,6 @@
 'use client'
 
-import Button from '@/components/UI/Button'
+import Button from '@/shared/components/ui/Button'
 import { signIn, signOut, useSession } from 'next-auth/react'
 
 export default function LoginButton() {

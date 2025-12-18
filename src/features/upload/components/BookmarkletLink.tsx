@@ -1,8 +1,9 @@
 'use client'
+
 import getConfig from 'next/config'
 import { useEffect, useState } from 'react'
 
-const Bookmarklet = () => {
+const BookmarkletLink = () => {
 	const [bookmarkletCode, setBookmarkletCode] = useState('')
 	const { publicRuntimeConfig } = getConfig() || { publicRuntimeConfig: { baseUrl: '' } }
 
@@ -24,4 +25,4 @@ const Bookmarklet = () => {
 	)
 }
 
-export default Bookmarklet
+export default BookmarkletLink

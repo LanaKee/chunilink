@@ -1,6 +1,6 @@
 'use client'
 
-import Box from '@/components/UI/Box'
+import Box from '@/shared/components/ui/Box'
 import { signIn, useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'

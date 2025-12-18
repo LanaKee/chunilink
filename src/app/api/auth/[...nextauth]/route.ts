@@ -1,4 +1,4 @@
-import { authOptions } from '@/library/auth'
+import { authOptions } from '@/shared/lib/auth'
 import NextAuth from 'next-auth'
 
 const handler = NextAuth(authOptions)

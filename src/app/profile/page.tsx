@@ -1,6 +1,6 @@
-import { Menu } from '@/components/Profile/Menubar'
-import RatingSongs from '@/components/Profile/RatingSongs'
-import UserCard from '@/components/Profile/UserCard'
+import { Menu } from '@/features/profile/components/Menubar'
+import RatingSongs from '@/features/profile/components/RatingSongs'
+import UserCard from '@/features/profile/components/UserCard'
 
 export default function ProfilePage() {
 	return (

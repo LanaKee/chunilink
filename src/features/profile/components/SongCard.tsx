@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { difficultyMap } from '@/constants/diffiulty'
-import { getPlayRankColor, getRatingTextColor } from '@/constants/rating'
-import { Difficulty } from '@/types/chunithm'
-import { PlayerScoreWithSong } from '@/types/prisma/PlayerScoreWithSong'
+import { difficultyMap } from '@/shared/constants/diffiulty'
+import { getPlayRankColor, getRatingTextColor } from '@/shared/constants/rating'
+import { Difficulty } from '@/shared/types/chunithm'
+import { PlayerScoreWithSong } from '@/shared/types/prisma/PlayerScoreWithSong'
 import Image from 'next/image'
 import { StatusBadge } from './StatusBadge'
 

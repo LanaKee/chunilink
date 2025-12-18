@@ -1,8 +1,9 @@
 import SessionProvider from '@/app/SessionProvider'
-import Footer from '@/components/shared/Footer'
-import Nabar from '@/components/shared/Nabar'
-import VerseBackground from '@/components/shared/VerseBackground'
-import { getServerAuthSession } from '@/library/auth'
+import Footer from '@/shared/components/layout/Footer'
+import Nabar from '@/shared/components/layout/Nabar'
+import VerseBackground from '@/shared/components/layout/VerseBackground'
+import XVerseBackground from '@/shared/components/layout/XVerseBackground'
+import { getServerAuthSession } from '@/shared/lib/auth'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
@@ -36,9 +37,9 @@ export default async function RootLayout({
 			>
 				<SessionProvider session={session}>
 					<Nabar session={session} />
-					<VerseBackground>
+					<XVerseBackground>
 						<div className="z-1 flex-grow overflow-auto">{children}</div>
-					</VerseBackground>
+					</XVerseBackground>
 					<Footer />
 				</SessionProvider>
 			</body>

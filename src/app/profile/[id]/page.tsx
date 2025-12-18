@@ -1,7 +1,7 @@
-import RatingSongs from '@/components/Profile/RatingSongs'
-import UserCard from '@/components/Profile/UserCard'
-import { getPlayerMetadata } from '@/server/database/player'
-import { getPlayerData } from '@/server/service/playerService'
+import RatingSongs from '@/features/profile/components/RatingSongs'
+import UserCard from '@/features/profile/components/UserCard'
+import { getPlayerMetadata } from '@/features/profile/server/player'
+import { getPlayerData } from '@/features/profile/server/playerService'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 

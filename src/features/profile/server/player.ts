@@ -1,4 +1,4 @@
-import { prisma } from '@/library/prismaSingleton'
+import { prisma } from '@/shared/lib/prismaSingleton'
 import { Prisma, RatingType } from '@prisma/client'
 
 export async function getPlayerBySlug(slug: string) {

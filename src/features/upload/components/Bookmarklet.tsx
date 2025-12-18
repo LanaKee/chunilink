@@ -1,6 +1,6 @@
 'use client'
 
-import Box from '@/components/UI/Box'
+import Box from '@/shared/components/ui/Box'
 import { Check, ClipboardCopy, ExternalLink, Info, Monitor, Smartphone } from 'lucide-react'
 import { useEffect, useState } from 'react'
 

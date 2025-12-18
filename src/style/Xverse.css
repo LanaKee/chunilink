@@ -1,22 +1,22 @@
 @layer utilities {
 	/* ── 이미지 helper ─────────────────────────────────────────────── */
 	.bg-bg-mobile {
-		background-image: url('/images/chunithm-verse/chunithm-base.jpg');
+		background-image: url('/images/chunithm-x-verse/background.jpg');
 	}
 	.bg-bg-desktop {
-		background-image: url('/images/chunithm-verse/chunithm-base.jpg');
+		background-image: url('/images/chunithm-x-verse/background.jpg');
 	}
 	.bg-frame-top-right {
-		background-image: url('/images/chunithm-verse/chunithm-topright.png');
+		background-image: url('/images/chunithm-x-verse/top_right.png');
 	}
 	.bg-frame-bottom-left {
-		background-image: url('/images/chunithm-verse/chunithm-bottomleft.png');
+		background-image: url('/images/chunithm-x-verse/bottom_left.png');
 	}
 	.bg-globe-cross {
-		background-image: url('/images/chunithm-verse/chunithm-globecover.png');
+		background-image: url('/images/chunithm-x-verse/chunithm-globecover.png');
 	}
 	.bg-globe {
-		background-image: url('/images/chunithm-verse/chunithm-globe.png');
+		background-image: url('/images/chunithm-x-verse/chunithm-globe.png');
 	}
 
 	/* 새 팔레트 유틸리티 클래스 */
@@ -62,108 +62,108 @@
 	}
 
 	/* ── 좌상 / 우하 큰 삼각형 (원본의 그라데) ──────────────────────── */
-	.verse-bg::before,
-	.verse-bg::after {
+	.xverse-bg::before,
+	.xverse-bg::after {
 		content: '';
 		position: absolute;
 		background-repeat: no-repeat;
 		background-size: contain;
 		z-index: -3;
 	}
-	.verse-bg::before {
+	.xverse-bg::before {
 		top: 0;
 		left: 0;
 		width: 30vw;
 		height: 22vw;
-		background-image: url('/images/chunithm-verse/chunithm-topleft.png');
+		background-image: url('/images/chunithm-x-verse/top_left.png');
 		transform-origin: 0;
 		animation: topLeft 6s linear infinite;
 	}
-	.verse-bg::after {
+	.xverse-bg::after {
 		bottom: 4%;
 		right: -18%;
 		width: 30vw;
 		height: 22vw;
-		background-image: url('/images/chunithm-verse/chunithm-bottomright.png');
+		background-image: url('/images/chunithm-x-verse/bottom_right.png');
 		transform-origin: 0;
 		transform: translate(0, 20%) rotate(-30deg);
 		animation: bottomRight 6s linear infinite;
 	}
 
 	/* ── 상단-우 / 하단-좌 얇은 프레임바 ──────────────────────────── */
-	.verse-bg .frame-tr {
+	.xverse-bg .frame-tr {
 		@apply absolute right-0 top-0 z-[-2] h-[9.5vw] w-[45vw] bg-contain bg-right-top bg-no-repeat;
-		background-image: url('/images/chunithm-verse/chunithm-topright.png'); /* ← 직접 지정 */
+		background-image: url('/images/chunithm-x-verse/top_right.png'); /* ← 직접 지정 */
 		opacity: 1;
 	}
 
-	.verse-bg .frame-bl {
+	.xverse-bg .frame-bl {
 		@apply absolute bottom-0 left-0 z-[-2] h-[9.75vw] w-[50vw] bg-contain bg-left-bottom bg-no-repeat;
-		background-image: url('/images/chunithm-verse/chunithm-bottomleft.png'); /* ← 직접 지정 */
+		background-image: url('/images/chunithm-x-verse/bottom_left.png'); /* ← 직접 지정 */
 		opacity: 1;
 	}
 	/* ── 사선 화살 애니메이션 ─────────────────────────────────────── */
-	.verse-bg .arrow-top-right {
+	.xverse-bg .arrow-top-right {
 		@apply absolute right-0 top-0 z-[-1] h-[9.75vw] w-[9.5vw] bg-contain bg-no-repeat md:h-[5.25vw] md:w-[5vw];
-		background-image: url('/images/chunithm-verse/chunithm-arrowdown.png');
+		background-image: url('/images/chunithm-x-verse/chunithm-arrowdown.png');
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82%);
 		animation: arrow 6s ease-in-out infinite;
 		opacity: 1;
 	}
-	.verse-bg .arrow-bottom-left {
+	.xverse-bg .arrow-bottom-left {
 		@apply absolute bottom-0 left-0 z-[-1] h-[14.5vw] w-[15vw] bg-contain bg-no-repeat md:h-[5.25vw] md:w-[5vw];
-		background-image: url('/images/chunithm-verse/chunithm-arrowup.png');
+		background-image: url('/images/chunithm-x-verse/chunithm-arrowup.png');
 		clip-path: polygon(0 0, 100% 16%, 100% 100%, 0 100%);
 		animation: arrow 6s ease-in-out infinite reverse;
 		opacity: 1;
 	}
 
 	/* ── 회전 입자 (보라/녹색 삼각 조각) ──────────────────────────── */
-	.verse-bg .particle-top-right {
+	.xverse-bg .particle-top-right {
 		@apply absolute right-0 top-0 z-[-5] h-[15vw] w-full bg-contain bg-no-repeat md:h-[8.125vw];
-		background-image: url('/images/chunithm-verse/chunithm-topright.png');
+		background-image: url('/images/chunithm-x-verse/top_right.png');
 		animation: particle 6s ease-in-out infinite;
 	}
-	.verse-bg .particle-bottom-left {
+	.xverse-bg .particle-bottom-left {
 		@apply absolute bottom-0 left-0 z-[-5] h-[15vw] w-full bg-contain bg-no-repeat md:h-[8.75vw];
-		background-image: url('/images/chunithm-verse/chunithm-bottomleft.png');
+		background-image: url('/images/chunithm-x-verse/bottom_left.png');
 		animation: particle 6s ease-in-out infinite;
 	}
 
 	/* ── 세로 “VERSE” 벨트 ────────────────────────────────────────── */
-	.verse-bg .verse {
+	.xverse-bg .verse {
 		position: absolute;
 		top: 0;
 		height: 200%;
 		width: 3vw; /* 기본 폭, 개별 클래스에서 덮어씀 */
-		background-image: url('/images/chunithm-verse/chunithm-versevert.png');
+		background-image: url('/images/chunithm-x-verse/chunithm-versevert.png');
 		background-repeat: no-repeat repeat;
 		background-size: contain;
 		background-position: top center;
 		z-index: -5;
 		/* outline: blue solid 3vw; */ /* 디버그용 */
 	}
-	.verse-bg .verse.left {
+	.xverse-bg .verse.left {
 		left: 4vw;
 		animation: verseBelt 20s linear infinite;
 	}
-	.verse-bg .verse.ctleft {
+	.xverse-bg .verse.ctleft {
 		left: 25vw;
 		animation: verseBelt 30s linear infinite reverse;
 	}
-	.verse-bg .verse.ctright {
+	.xverse-bg .verse.ctright {
 		right: 25vw;
 		animation: verseBelt 30s linear infinite;
 	}
-	.verse-bg .verse.right {
+	.xverse-bg .verse.right {
 		right: 4vw;
 		animation: verseBelt 20s linear infinite reverse;
 	}
 
 	/* ── 코너 흐르는 텍스트 스트립 ────────────────────────────────── */
 
-	.verse-bg .corner-wrap-tr,
-	.verse-bg .corner-wrap-bl {
+	.xverse-bg .corner-wrap-tr,
+	.xverse-bg .corner-wrap-bl {
 		position: absolute; /* 화면 기준 배치 */
 		width: 2200px; /* PNG 폭보다 살짝 더 길게 */
 		height: 6.5vw; /* 높이 = PNG 비율 */
@@ -173,18 +173,18 @@
 	}
 
 	/* 위치 잡기 (화면 밖 살짝 빼서 자연스럽게) */
-	.verse-bg .corner-wrap-tr {
+	.xverse-bg .corner-wrap-tr {
 		top: -8vw;
 		right: -12vw;
 	} /* 상단 한층 더 위로 */
-	.verse-bg .corner-wrap-bl {
+	.xverse-bg .corner-wrap-bl {
 		bottom: -10vw;
 		left: -8vw;
 	} /* 하단 한층 더 아래로 */
 
 	/* ─ 실제 흐르는 PNG ─ */
-	.verse-bg .corner-img-tr,
-	.verse-bg .corner-img-bl {
+	.xverse-bg .corner-img-tr,
+	.xverse-bg .corner-img-bl {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -195,35 +195,35 @@
 	}
 
 	/* 각각의 이미지 파일 지정 */
-	.verse-bg .corner-img-tr {
-		background-image: url('/images/chunithm-verse/chunithm-versetext.png');
+	.xverse-bg .corner-img-tr {
+		background-image: url('/images/chunithm-x-verse/chunithm-versetext.png');
 	}
-	.verse-bg .corner-img-bl {
-		background-image: url('/images/chunithm-verse/chunithm-versetext.png');
+	.xverse-bg .corner-img-bl {
+		background-image: url('/images/chunithm-x-verse/chunithm-versetext.png');
 	}
 
 	/* ── 글로브 util (Tailwind에서 인식되도록) ───────────────────── */
-	.verse-bg .animate-globe {
+	.xverse-bg .animate-globe {
 		animation: globe 240s linear infinite;
 	}
-	.verse-bg .globe-cross {
+	.xverse-bg .globe-cross {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		width: 34vw;
 		height: 34vw;
 		transform: translate(-50%, -50%);
-		background: url('/images/chunithm-verse/chunithm-globecover.png') center/contain no-repeat;
+		background: url('/images/chunithm-x-verse/chunithm-globecover.png') center/contain no-repeat;
 		z-index: -1; /* 화살(z:-1)·텍스트(z:-1) 와 같은 층 */
 	}
-	.verse-bg .globe-cross::after {
+	.xverse-bg .globe-cross::after {
 		content: '';
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		width: 29.75vw;
 		height: 29.75vw;
-		background: url('/images/chunithm-verse/chunithm-globe.png') center/contain no-repeat;
+		background: url('/images/chunithm-x-verse/chunithm-globe.png') center/contain no-repeat;
 		opacity: 0.9;
 		animation: globe 240s linear infinite;
 	}
@@ -296,10 +296,10 @@
 		}
 	}
 	@media (min-width: 768px) {
-		.verse-bg .corner-wrap-tr {
+		.xverse-bg .corner-wrap-tr {
 			top: -6vw;
 		}
-		.verse-bg .corner-wrap-bl {
+		.xverse-bg .corner-wrap-bl {
 			bottom: -9.5vw;
 		}
 	}

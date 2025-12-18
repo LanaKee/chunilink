@@ -1,4 +1,4 @@
-import { prisma } from '@/library/prismaSingleton'
+import { prisma } from '@/shared/lib/prismaSingleton'
 import { PrismaAdapter } from '@auth/prisma-adapter'
 import { NextAuthOptions } from 'next-auth'
 import { Adapter } from 'next-auth/adapters'

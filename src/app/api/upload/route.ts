@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { getServerAuthSession } from '@/library/auth'
-import { prisma } from '@/library/prismaSingleton'
-import { ChunithmData, PrismaEnumMap } from '@/types/chunithm'
-import { calculateRating } from '@/utils/ratingCalculation'
+import { getServerAuthSession } from '@/shared/lib/auth'
+import { prisma } from '@/shared/lib/prismaSingleton'
+import { ChunithmData, PrismaEnumMap } from '@/shared/types/chunithm'
+import { calculateRating } from '@/shared/utils/ratingCalculation'
 import { HonorClass, RatingType } from '@prisma/client'
 import { Decimal } from '@prisma/client/runtime/binary'
 import { randomUUID } from 'crypto'

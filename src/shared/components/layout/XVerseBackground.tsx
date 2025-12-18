@@ -1,10 +1,10 @@
-export default function VerseBackground({ children }: { children: React.ReactNode }) {
+export default function XVerseBackground({ children }: { children: React.ReactNode }) {
 	return (
 		<div className="relative min-h-screen">
-			<div id="verse" className="common-bg fixed inset-0 select-none overflow-visible">
+			<div id="xverse" className="xverse-bg fixed inset-0 select-none overflow-visible">
 				<div
 					className="absolute inset-0 -z-20 bg-cover bg-center"
-					style={{ backgroundImage: "url('/images/chunithm/chunithm-base.jpg')" }}
+					style={{ backgroundImage: "url('/images/chunithm-x-verse/background.jpg')" }}
 				/>
 
 				<div className="tri-tl" />

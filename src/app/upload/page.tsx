@@ -1,11 +1,11 @@
 /* eslint-disable */
 'use client'
 
-import Bookmarklet from '@/components/shared/Bookmarklet'
-import Box from '@/components/UI/Box'
-import Button from '@/components/UI/Button'
-import StatusLabel from '@/components/Upload/StatusLabel'
-import { ChunithmData } from '@/types/chunithm'
+import Bookmarklet from '@/features/upload/components/Bookmarklet'
+import Box from '@/shared/components/ui/Box'
+import Button from '@/shared/components/ui/Button'
+import StatusLabel from '@/features/upload/components/StatusLabel'
+import { ChunithmData } from '@/shared/types/chunithm'
 import { AlertCircle, CheckCircle2 } from 'lucide-react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'

@@ -1,6 +1,6 @@
-import { getServerAuthSession } from '@/library/auth'
-import { prisma } from '@/library/prismaSingleton'
-import { getPlayerBySlug } from '@/server/database/player'
+import { getServerAuthSession } from '@/shared/lib/auth'
+import { prisma } from '@/shared/lib/prismaSingleton'
+import { getPlayerBySlug } from '@/features/profile/server/player'
 import { notFound } from 'next/navigation'
 
 export async function getPlayerData(id: string) {

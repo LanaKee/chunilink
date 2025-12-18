@@ -1,5 +1,5 @@
-import { getRatingTextColor } from '@/constants/rating'
-import { PlayerScoreWithSong } from '@/types/prisma/PlayerScoreWithSong'
+import { getRatingTextColor } from '@/shared/constants/rating'
+import { PlayerScoreWithSong } from '@/shared/types/prisma/PlayerScoreWithSong'
 import { RatingType } from '@prisma/client'
 import React from 'react'
 import { SongCard } from './SongCard'

@@ -1,4 +1,4 @@
-import { Difficulty } from '@/types/chunithm'
+import { Difficulty } from '@/shared/types/chunithm'
 
 export const difficultyMap: Record<Difficulty, { abbr: string; color: string }> = {
 	BASIC: {

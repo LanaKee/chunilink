@@ -1,8 +1,8 @@
-import { CHUNITHM_INTERNATIONAL_VERSIONS } from '@/constants/version'
-import Avatar from '@UI/Avatar'
-import FriendCode from '@UI/FriendCode'
-import Honner from '@UI/Honner'
-import RatingBox from '@UI/Rating'
+import { CHUNITHM_INTERNATIONAL_VERSIONS } from '@/shared/constants/version'
+import Avatar from '@/shared/components/ui/Avatar'
+import FriendCode from '@/shared/components/ui/FriendCode'
+import Honner from '@/shared/components/ui/Honner'
+import RatingBox from '@/shared/components/ui/Rating'
 import ProfileLink from './ProfileLink'
 
 interface UserCardProps {
