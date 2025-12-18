@@ -38,7 +38,7 @@ export function Menu() {
 			{menuItems.map((item) => (
 				<button
 					key={item.label}
-					className="group flex h-24 w-24 flex-col items-center justify-center rounded-xl border border-white/50 px-5 py-3 shadow-lg backdrop-blur-lg transition-all duration-200 hover:bg-white/70 hover:shadow-xl active:scale-95 dark:border-white/20 dark:hover:bg-white/20"
+					className="group flex h-24 w-24 flex-col items-center justify-center rounded-xl border border-white/35 bg-white/20 px-5 py-3 shadow-[0_18px_40px_-28px_rgba(15,23,42,0.55)] backdrop-blur-xl transition-all duration-200 hover:bg-white/35 hover:shadow-[0_20px_50px_-28px_rgba(15,23,42,0.6)] active:scale-95 dark:border-white/15 dark:bg-white/5 dark:hover:bg-white/10"
 				>
 					{item.icon}
 					<span className="text-xs font-semibold text-gray-700 group-hover:text-gray-900 dark:text-gray-200 dark:group-hover:text-white">
