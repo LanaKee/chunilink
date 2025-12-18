@@ -1,7 +1,6 @@
 import SessionProvider from '@/app/SessionProvider'
 import Footer from '@/shared/components/layout/Footer'
 import Nabar from '@/shared/components/layout/Nabar'
-import VerseBackground from '@/shared/components/layout/VerseBackground'
 import XVerseBackground from '@/shared/components/layout/XVerseBackground'
 import { getServerAuthSession } from '@/shared/lib/auth'
 import type { Metadata } from 'next'
