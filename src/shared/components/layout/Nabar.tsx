@@ -17,7 +17,7 @@ export default function NavbarContent({ session }: { session: Session | null }) 
 	}
 
 	return (
-		<header className="backdrop-saturate-90 bg-linear-to-b relative top-0 z-20 w-full border border-white/30 from-white/50 to-white/20 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.15)] backdrop-blur-xl dark:border-white/10 dark:from-white/10 dark:to-white/5">
+		<header className="glass-surface relative top-0 z-20 w-full p-4 shadow-[0_8px_32px_rgba(0,0,0,0.15)]">
 			<nav className="mx-auto flex max-w-7xl items-center justify-between">
 				<NextLink href="/" className="flex items-center gap-2">
 					<div className="from-chuni-mint-700 to-chuni-violet-500 bg-linear-to-r bg-clip-text text-2xl font-bold text-transparent">
@@ -58,7 +58,7 @@ export default function NavbarContent({ session }: { session: Session | null }) 
 
 			{/* 모바일 메뉴 (드롭다운) */}
 			{isOpen && (
-				<div className="backdrop-saturate-90 mt-4 rounded-xl border border-white/30 bg-gradient-to-b from-white/60 to-white/30 p-4 shadow-[0_12px_32px_rgba(0,0,0,0.2)] backdrop-blur-xl dark:border-white/10 dark:from-white/15 dark:to-white/5">
+				<div className="glass-surface-strong mt-4 rounded-xl p-4">
 					<div className="flex flex-col space-y-4">
 						<NextLink
 							href="/upload"

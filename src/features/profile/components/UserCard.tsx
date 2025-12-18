@@ -1,8 +1,8 @@
-import { CHUNITHM_INTERNATIONAL_VERSIONS } from '@/shared/constants/version'
 import Avatar from '@/shared/components/ui/Avatar'
 import FriendCode from '@/shared/components/ui/FriendCode'
 import Honner from '@/shared/components/ui/Honner'
 import RatingBox from '@/shared/components/ui/Rating'
+import { CHUNITHM_INTERNATIONAL_VERSIONS } from '@/shared/constants/version'
 import ProfileLink from './ProfileLink'
 
 interface UserCardProps {
@@ -64,7 +64,7 @@ const UserCard: React.FC<UserCardProps> = ({
 	const shortVersion = version.includes('CHUNITHM') ? version.split('CHUNITHM ')[1] : version
 
 	return (
-		<div className="flex flex-col items-center justify-between gap-6 rounded-2xl border border-white/30 bg-white/20 px-8 py-8 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.5)] backdrop-blur-2xl md:flex-row md:items-end dark:border-white/10 dark:bg-white/5">
+		<div className="glass-surface flex flex-col items-center justify-between gap-6 rounded-2xl px-8 py-8 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.5)] md:flex-row md:items-end">
 			<div className="flex flex-1 flex-col items-center gap-3 md:items-start">
 				<div className="flex w-full max-w-xs flex-col gap-1 text-center">
 					{honners.map((h, i) => (

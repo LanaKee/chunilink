@@ -20,7 +20,7 @@ export const ProfileLink: React.FC<ProfileLinkProps> = ({ slug }) => {
 
 	return (
 		<div className="mt-2 flex items-center">
-			<div className="group flex items-center gap-2 rounded-md border border-white/35 bg-white/25 px-3 py-1.5 shadow-sm backdrop-blur-lg transition-colors hover:bg-white/35 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10">
+			<div className="glass-surface group flex items-center gap-2 rounded-md px-3 py-1.5 shadow-sm transition-colors hover:from-white/60 hover:to-white/35 dark:hover:from-white/15 dark:hover:to-white/10">
 				<span className="max-w-[200px] truncate text-sm font-medium text-gray-700 md:max-w-xs dark:text-gray-200">
 					{profileUrl}
 				</span>

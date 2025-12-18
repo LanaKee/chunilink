@@ -15,7 +15,7 @@ export const SongCard = ({ song, index }: { song: PlayerScoreWithSong; index: nu
 	const displayPlayRank = song.playRank?.replace('_PLUS', '+') || ''
 
 	return (
-		<div className="flex transform flex-col overflow-hidden rounded-lg border border-white/40 bg-white/5 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-white/10 dark:bg-black/5 dark:shadow-white/5">
+		<div className="glass-surface flex transform flex-col overflow-hidden rounded-lg blur-lg blur-none transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:shadow-white/5">
 			{/* 커버 이미지 */}
 			<div className="relative w-full pt-[100%]">
 				<Image
@@ -28,7 +28,7 @@ export const SongCard = ({ song, index }: { song: PlayerScoreWithSong; index: nu
 					{index + 1}
 				</div>
 				<div
-					className={`absolute bottom-2 right-2 ${difficultyColor.color} flex min-w-[32px] flex-row items-center space-x-1 rounded px-1.5 py-1 text-xs font-bold text-white`}
+					className={`absolute bottom-2 right-2 ${difficultyColor.color} flex min-w-8 flex-row items-center space-x-1 rounded px-1.5 py-1 text-xs font-bold text-white`}
 				>
 					<span>{diffInfo?.difficulty}</span>
 					<span>{String(diffInfo?.level)}</span>
@@ -50,7 +50,7 @@ export const SongCard = ({ song, index }: { song: PlayerScoreWithSong; index: nu
 					{song.song.title}
 				</h3>
 				<p
-					className="truncate text-xs text-gray-600 dark:text-gray-400"
+					className="truncate text-xs text-gray-600 dark:text-gray-300"
 					title={song.song.artist || ''}
 				>
 					{song.song.artist}
@@ -60,7 +60,7 @@ export const SongCard = ({ song, index }: { song: PlayerScoreWithSong; index: nu
 			{/* 점수 및 레이팅 - 고정된 위치 */}
 			<div className="flex items-end justify-between p-2 pt-0">
 				<div className="flex flex-col items-start">
-					<div className="font-mono text-xs text-gray-700 dark:text-gray-300">
+					<div className="font-mono text-xs text-gray-700 dark:text-gray-100">
 						{song.score.toLocaleString()}
 					</div>
 				</div>

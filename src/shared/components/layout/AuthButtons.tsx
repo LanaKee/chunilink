@@ -48,7 +48,7 @@ export default function AuthButtons({ isLoggedIn }: AuthButtonsProps) {
 		<button
 			onClick={handleLogin}
 			disabled={isLoading}
-			className="w-full cursor-pointer rounded-lg bg-indigo-50 px-4 py-3 text-center text-indigo-600 transition hover:bg-indigo-100 hover:text-indigo-700 disabled:opacity-50 md:w-auto md:bg-transparent md:px-0 md:py-0 md:text-gray-700 md:hover:bg-transparent md:hover:text-indigo-600 dark:bg-indigo-900/20 dark:text-indigo-400 dark:hover:bg-indigo-900/30 dark:hover:text-indigo-300 md:dark:bg-transparent md:dark:text-gray-200 md:dark:hover:bg-transparent md:dark:hover:text-indigo-400"
+			className="dark:text-foreground w-full cursor-pointer rounded-lg bg-indigo-50 px-4 py-3 text-center text-indigo-600 transition hover:bg-indigo-100 hover:text-indigo-700 disabled:opacity-50 md:w-auto md:bg-transparent md:px-0 md:py-0 md:text-gray-700 md:hover:bg-transparent md:hover:text-indigo-600 dark:bg-indigo-900/20 dark:hover:bg-indigo-900/30 dark:hover:text-indigo-300 md:dark:bg-transparent md:dark:text-gray-200 md:dark:hover:bg-transparent md:dark:hover:text-indigo-400"
 		>
 			{isLoading ? '처리 중...' : '로그인'}
 		</button>

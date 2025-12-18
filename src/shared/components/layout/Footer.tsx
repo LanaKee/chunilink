@@ -2,13 +2,13 @@ import { FaGithub } from 'react-icons/fa'
 
 export default function Footer() {
 	return (
-		<footer className="dark:bg-background/80 w-full border-t border-gray-200 bg-white/40 py-10 backdrop-blur-lg transition-all duration-300 dark:border-white/15">
+		<footer className="glass-surface w-full py-10 transition-all duration-300">
 			<div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-4 md:flex-row">
 				<div className="text-center md:text-left">
-					<div className="from-chuni-mint-600 to-chuni-violet-500 mb-3 max-w-fit bg-gradient-to-r bg-clip-text text-2xl font-bold text-transparent">
+					<div className="from-chuni-mint-600 to-chuni-violet-500 bg-linear-to-r mb-3 max-w-fit bg-clip-text text-2xl font-bold text-transparent">
 						CHUNILINK
 					</div>
-					<p className="max-w-md text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+					<p className="max-w-md text-sm leading-relaxed text-gray-600 dark:text-gray-200">
 						본 웹사이트는 CHUNITHM의 비공식 팬 사이트로, SEGA와 직접적인 관련이 없습니다. 게임 관련
 						데이터 및 콘텐츠의 저작권은{' '}
 						<a

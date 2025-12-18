@@ -11,7 +11,7 @@ export default function ProfilePage() {
 				<div className="absolute bottom-[-6rem] left-1/3 h-64 w-64 rounded-full bg-gradient-to-br from-chuni-green-400/20 via-chuni-mint-300/15 to-transparent blur-3xl" />
 			</div>
 			<div className="relative mx-6">
-				<div className="mx-auto max-w-4xl space-y-8">
+				<div className="glass-surface mx-auto max-w-4xl space-y-8 rounded-3xl p-6 md:p-8">
 					<UserCard
 						slug="chunilink"
 						userName="CHUNILINK"

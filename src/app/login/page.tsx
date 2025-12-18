@@ -68,7 +68,7 @@ export default function LoginPage() {
 
 	return (
 		<div className="flex min-h-screen items-center justify-center p-4">
-			<Box className="mx-auto w-full max-w-md p-8 dark:bg-black/40">
+			<Box className="glass-surface mx-auto w-full max-w-md p-8">
 				<div className="text-center">
 					<p className="mb-8 text-gray-600 dark:text-white">계속하려면 Discord로 로그인하세요.</p>
 				</div>
