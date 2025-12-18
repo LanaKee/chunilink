@@ -577,7 +577,7 @@ function UploadPageContent() {
 
 	return (
 		<React.Fragment>
-			<div className="dark:bg-background/40 backdrop-blur-xs min-h-screen bg-white/30 py-10">
+			<div className="glass-surface min-h-screen py-10">
 				<div className="mx-auto max-w-xl px-6">
 					<div className="space-y-8">
 						{/* 헤더 */}
