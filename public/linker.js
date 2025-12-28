@@ -149,7 +149,7 @@ const utils = {
 						clearType = 'BRAVE'
 					} else if (src.includes('icon_absolute.png')) {
 						clearType = 'ABSOLUTE'
-					} else if (src.includes('icon_rank_catastrophy')) {
+					} else if (src.includes('icon_catastrophy')) {
 						clearType = 'CATASTROPHY'
 					}
 
