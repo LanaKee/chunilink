@@ -28,7 +28,7 @@ const getClearTypeStyle = (clearType: string) => {
 		case 'ABSOLUTE':
 			return 'bg-gradient-to-r from-purple-400/50 via-pink-400/50 to-yellow-400/50 border border-purple-400/60 text-gray-800 dark:text-white backdrop-blur-sm'
 		case 'CATASTROPHY':
-			return 'bg-gradient-to-r from-red-400/50 via-purple-400/50 to-blue-400/50 border border-purple-400/60 text-gray-800 dark:text-white backdrop-blur-sm'
+			return 'bg-white/70 border border-white/50 text-gray-800 dark:text-white backdrop-blur-md'
 		case 'FAIL':
 			return 'bg-gradient-to-r from-red-500/50 to-red-600/50 border border-red-500/60 text-red-900 dark:text-red-100 backdrop-blur-sm'
 		default:
@@ -41,7 +41,7 @@ const getComboTypeStyle = (comboType: string) => {
 		case 'ALL_JUSTICE':
 			return 'bg-gradient-to-r from-purple-400/50 via-pink-400/50 to-yellow-400/50 border border-purple-400/60 text-gray-800 dark:text-white backdrop-blur-sm'
 		case 'ALL_JUSTICE_CRITICAL':
-			return 'bg-gradient-to-r from-red-400/50 via-purple-400/50 to-blue-400/50 border border-purple-400/60 text-gray-800 dark:text-white backdrop-blur-sm'
+			return 'bg-gradient-to-r from-indigo-300/50 via-purple-300/50 to-pink-300/50 border border-white/50 text-gray-800 dark:text-white backdrop-blur-md'
 		case 'FULL_COMBO':
 			return 'bg-gradient-to-r from-yellow-300/50 via-yellow-400/50 to-orange-400/50 border border-yellow-400/60 text-yellow-900 dark:text-yellow-100 backdrop-blur-sm'
 		default:

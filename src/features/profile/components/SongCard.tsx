@@ -75,14 +75,12 @@ export const SongCard = ({ song, index }: { song: PlayerScoreWithSong; index: nu
 			{/* 향상된 상태 배지 섹션 - 높이 고정 */}
 			<div className="mb-1 h-24 flex-1 p-2 pt-1">
 				{song.clearType && song.clearType !== 'CLEAR' && (
-					<StatusBadge type="clear" label={song.clearType} className="mt-2 flex-grow" />
+					<StatusBadge type="clear" label={song.clearType} className="mt-2 grow" />
 				)}
 				{song.comboType && (
-					<StatusBadge type="combo" label={song.comboType} className="mt-2 flex-grow" />
+					<StatusBadge type="combo" label={song.comboType} className="mt-2 grow" />
 				)}
-				{song.cToCType && (
-					<StatusBadge type="chain" label={song.cToCType} className="mt-2 flex-grow" />
-				)}
+				{song.cToCType && <StatusBadge type="chain" label={song.cToCType} className="mt-2 grow" />}
 			</div>
 		</div>
 	)
