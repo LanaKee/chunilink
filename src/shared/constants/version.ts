@@ -38,5 +38,9 @@ export const CHUNITHM_INTERNATIONAL_VERSIONS = [
 	{
 		version: 'CHUNITHM CROSS VERSE',
 		release: '2025-11-20'
+	},
+	{
+		version: 'CHUNITHM CROSS VERSE X',
+		release: '2026-4-16'
 	}
 ]

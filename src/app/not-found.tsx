@@ -13,7 +13,7 @@ export default function NotFound() {
 				<main className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center px-4 py-8 text-center">
 					<div className="rounded-2xl border border-white/20 bg-white/40 p-12 shadow-xl backdrop-blur-md dark:border-gray-700/30 dark:bg-gray-900/40">
 						<div className="mb-8">
-							<h1 className="from-chuni-violet-500 via-chuni-mint-700 to-chuni-sky-700 bg-gradient-to-r bg-clip-text text-8xl font-bold text-transparent">
+							<h1 className="from-chuni-violet-500 via-chuni-mint-700 to-chuni-sky-700 bg-linear-to-r bg-clip-text text-8xl font-bold text-transparent">
 								404
 							</h1>
 						</div>

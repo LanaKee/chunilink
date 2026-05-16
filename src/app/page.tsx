@@ -28,8 +28,9 @@ export default function Home() {
 						<div className="pointer-events-none absolute inset-0 rounded-2xl border border-white/35 opacity-40 dark:border-white/10" />
 						<div className="bg-linear-to-br pointer-events-none absolute inset-0 rounded-2xl from-white/30 via-white/10 to-transparent opacity-70 dark:from-white/10 dark:via-transparent" />
 						<h1 className="relative mb-6 text-3xl font-bold text-gray-900 dark:text-white">
+							<div className="mb-2 text-sm font-medium text-gray-500 dark:text-gray-300">cross verse X</div>
 							<span className="bg-linear-to-r from-chuni-violet-500 to-chuni-mint-600 via-pink-400 bg-clip-text text-transparent">
-								X-VERSE 대응 업데이트 완료
+								X-VERSE X 대응 업데이트 완료
 							</span>
 						</h1>
 						<div className="relative space-y-6 leading-relaxed text-gray-700 dark:text-gray-200">

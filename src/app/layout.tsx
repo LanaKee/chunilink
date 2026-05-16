@@ -37,7 +37,7 @@ export default async function RootLayout({
 				<SessionProvider session={session}>
 					<Nabar session={session} />
 					<XVerseBackground>
-						<div className="z-1 flex-grow overflow-auto">{children}</div>
+						<div className="z-1 grow overflow-auto">{children}</div>
 					</XVerseBackground>
 					<Footer />
 				</SessionProvider>
